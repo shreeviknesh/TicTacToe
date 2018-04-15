@@ -43,7 +43,7 @@ const initialize = () => {
 }
 
 const movePlayed = cell => {
-    let index = cell.id[0] - 1;
+    let index = cell.getAttribute('data-index');
 
     if(gameOver)
         return;
