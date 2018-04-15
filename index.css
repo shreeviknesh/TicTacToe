@@ -2,18 +2,18 @@
     --width: 90vw;
     --height: 60vh;
 
-    --initial-cell-color: #999999;
-    --hover-cell-color: #CCCCCC;
+    --initial-cell-color: #39CCCC;
+    --hover-cell-color: #7FDBFF;
 
-    --main-bg-color: #333333;
-    --main-color: #01FF70;
+    --main-bg-color: #001f3f;
+    --main-color: #0074D9;
 
-    --XColor: white;
-    --OColor: black;
+    --player-a-color: white;
+    --player-b-color: black;
 }
 
 body {
-    padding: 2.8vh;
+    padding-top: 2.8vh;
     background: var(--main-bg-color);
 }
 
@@ -21,11 +21,14 @@ body {
     font-size: 7vh;
     line-height: 5vh;
     font-family: monospace;
+    text-shadow: 0 1px var(--initial-cell-color);
     text-align: center;
     color: var(--main-color);
+    padding: 0;
 }
 
 .game-board {
+    padding: 0;
     margin: auto;
     width: var(--height);
     max-width: var(--width);
@@ -43,14 +46,14 @@ body {
 
 .game-cell:hover {
     background: var(--hover-cell-color);
-    box-shadow: 0 0 30px var(--main-color);
+    box-shadow: 0 0 40px var(--main-color);
     border: none;
 }
 
 #game-over {
     visibility: hidden;
     color: var(--main-color);
-	text-shadow: 1px 1px black;
+	text-shadow: 2px 2px black;
     margin-top: 5vh;
     font-size: 5vh;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -58,10 +61,21 @@ body {
 }
 
 #smaller {
+    margin-top: 10px;
     font-size: 0.7em;
-	text-shadow: 2px 2px blue;
+	text-shadow: 2px 2px black;
 }
 
-#smaller:hover {
-	text-shadow: 2px 2px red;
+#start-btn {
+    border: 1px solid white;
+    padding: 1px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#start-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    text-shadow: none;
+    text-shadow: 1px 1px var(--main-bg-color);
 }
