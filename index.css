@@ -1,5 +1,5 @@
 :root {
-    --width: 60vw;
+    --width: 90vw;
     --height: 60vh;
 
     --initial-cell-color: #999999;
@@ -58,7 +58,7 @@ body {
 }
 
 #smaller {
-    font-size: 0.8em;
+    font-size: 0.7em;
 	text-shadow: 2px 2px blue;
 }
 
