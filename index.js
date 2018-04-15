@@ -17,13 +17,6 @@ for(let i = 0; i < 9; i++) {
         movePlayed(cells[i]);
 })};
 
-const addRestartEvent = () => {
-	const newGame = document.getElementById('start-btn');
-	newGame.addEventListener('click', event => {
-		initialize();
-	});
-}
-
 const initialize = () => {
     valueArr = new Array(9).fill(0);
     playedArr = new Array(9).fill(false);
@@ -34,9 +27,8 @@ const initialize = () => {
 
     const color = window.getComputedStyle(document.documentElement).getPropertyValue('--initial-cell-color');
 
-    for(let i = 0; i < 9; i++) {
-        cells[i].style.background = color;
-    }
+    for(cell of cells)
+        cell.style.background = color;
 
     result.style.visibility = 'hidden';
 }
@@ -90,7 +82,9 @@ const hasWon = (player) => {
 
 const gameOverFolks = msg => {
     result.innerHTML = msg + '<div id="smaller">Start a new game?  <a href="#" id="start-btn"> Yes </a> </div>';
-	addRestartEvent();
+	document.getElementById('start-btn').addEventListener('click', event => {
+		initialize();
+	});
     result.style.visibility = 'visible';
     gameOver = true;
 }
