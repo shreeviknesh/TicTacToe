@@ -5,7 +5,7 @@ let valueArr = new Array(9).fill(0);
 let playedArr = new Array(9).fill(false);
 
 let currentMove = 'A';
-let turns = 0;
+let turnsPlayed = 0;
 let gameOver = false;
 
 const colorA = window.getComputedStyle(document.documentElement).getPropertyValue('--player-a-color');
@@ -25,12 +25,11 @@ const addRestartEvent = () => {
 }
 
 const initialize = () => {
-
     valueArr = new Array(9).fill(0);
     playedArr = new Array(9).fill(false);
 
     currentMove = 'A';
-    turns = 0;
+    turnsPlayed = 0;
     gameOver = false;
 
     const color = window.getComputedStyle(document.documentElement).getPropertyValue('--initial-cell-color');
@@ -45,13 +44,10 @@ const initialize = () => {
 const movePlayed = cell => {
     let index = cell.getAttribute('data-index');
 
-    if(gameOver)
+    if(gameOver || playedArr[index])
         return;
 
-    if(playedArr[index] == true)
-        return;
-
-    turns++;
+    turnsPlayed++;
 
     valueArr[index] = currentMove;
     playedArr[index] = true;
@@ -61,46 +57,32 @@ const movePlayed = cell => {
     else
         cell.style.background = colorB;
 
-    if(doesAWin()) {
+    if(hasWon('A')) {
         gameOverFolks("Player One Wins!");
     }
 
-    if(doesBWin()) {
+    if(hasWon('B')) {
         gameOverFolks("Player Two Wins!");
     }
 
-    if(turns == 9 && gameOver == false) {
+    if(turnsPlayed == 9 && gameOver == false) {
         gameOverFolks("Draw game.");
     }
 
     currentMove = (currentMove == 'A') ?'B' :'A';
 }
 
-const doesAWin = () => {
+const hasWon = (player) => {
     for(let i = 0; i < 3; i++) {
-        if(valueArr[3 * i] == 'A' && valueArr[3 * i + 1] == 'A' && valueArr[3 * i + 2] == 'A')
+        if(valueArr[3 * i] == player && valueArr[3 * i + 1] == player && valueArr[3 * i + 2] == player)
             return true;
-        if(valueArr[i] == 'A' && valueArr[i + 3] == 'A' && valueArr[i + 6] == 'A')
+        if(valueArr[i] == player && valueArr[i + 3] == player && valueArr[i + 6] == player)
             return true;
     }
-    if(valueArr[0] == 'A' && valueArr[4] == 'A' && valueArr[8] == 'A')
-        return true;
-    if(valueArr[2] == 'A' && valueArr[4] == 'A' && valueArr[6] == 'A')
-        return true;
 
-    return false;
-}
-
-const doesBWin = () => {
-    for(let i = 0; i < 3; i++) {
-        if(valueArr[3 * i] == 'B' && valueArr[3 * i + 1] == 'B' && valueArr[3 * i + 2] == 'B')
-            return true;
-        if(valueArr[i] == 'B' && valueArr[i + 3] == 'B' && valueArr[i + 6] == 'B')
-            return true;
-    }
-    if(valueArr[0] == 'B' && valueArr[4] == 'B' && valueArr[8] == 'B')
+    if(valueArr[0] == player && valueArr[4] == player && valueArr[8] == player)
         return true;
-    if(valueArr[2] == 'B' && valueArr[4] == 'B' && valueArr[6] == 'B')
+    if(valueArr[2] == player && valueArr[4] == player && valueArr[6] == player)
         return true;
 
     return false;
