@@ -21,8 +21,7 @@ body {
 #title {
     font-size: 8vh;
     line-height: 5vh;
-    font-family: 'Roboto';
-    /* text-shadow: 0 1px var(--initial-cell-color); */
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     color: var(--main-color);
     padding: 0;
@@ -63,8 +62,8 @@ body {
 
 #smaller {
     margin-top: 10px;
+    text-shadow: 2px 2px black;
     font-size: 0.7em;
-	text-shadow: 2px 2px black;
 }
 
 #start-btn {
