@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 :root {
     --width: 90vw;
     --height: 60vh;
@@ -18,10 +19,10 @@ body {
 }
 
 #title {
-    font-size: 7vh;
+    font-size: 8vh;
     line-height: 5vh;
-    font-family: monospace;
-    text-shadow: 0 1px var(--initial-cell-color);
+    font-family: 'Roboto';
+    /* text-shadow: 0 1px var(--initial-cell-color); */
     text-align: center;
     color: var(--main-color);
     padding: 0;
