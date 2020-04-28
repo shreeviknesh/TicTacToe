@@ -1,6 +1,7 @@
-TicTacToe
+Tic Tac Toe
 ---
-A Tic Tac Toe game made using vanilla JS. Designed to be clean and mobile-friendly.
+A Tic Tac Toe game made using vanilla JS. 
+Designed to be clean and mobile-friendly.
 
 ### Todo:
 - Implement AI to play as computer (minimax)
