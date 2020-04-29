@@ -36,6 +36,10 @@ Thanks to [GeeksForGeeks](https://www.geeksforgeeks.org/minimax-algorithm-in-gam
 
 Screenshots
 ---
+## Mobile
+<img src="img/screenshots-mob.gif" alt="Mobile GIF">
+
+## Web
 |State|Screenshot|
 |---|---|
 |Initial Page|<img src="img/Initial.png" height="300px" alt="Initial">|
