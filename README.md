@@ -5,6 +5,8 @@ TicTacToe
 - Also called as "unbeatable" AI in TicTacToe as the game is detemined to always be a win for the computer or a draw.
 - Optimized for mobile usage.
 
+> The website is published at [TicTacToe](https://shreeviknesh.github.io/TicTacToe)
+
 Algorithm
 ----
 - findBestMove() is the function that will be called each time the computer has to make a move
