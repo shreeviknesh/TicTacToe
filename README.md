@@ -1,7 +1,9 @@
 TicTacToe
 ----
 - Tic-Tac-Toe game implemented using Javascript. Also implemented a minimax algorithm based AI to play against the user. 
-- Minimax algorithm is an Artificial Intelligence/Game Theory alorithm that determines the optimal move to be played given the state of the board. Also called as "unbeatable" AI in TicTacToe.
+- [Minimax algorithm](https://en.wikipedia.org/wiki/Minimax) is an Artificial Intelligence/Game Theory alorithm that determines the optimal move to be played given the state of the board. 
+- Also called as "unbeatable" AI in TicTacToe as the game is detemined to always be a win for the computer or a draw.
+- Optimized for mobile usage.
 
 Algorithm
 ----
