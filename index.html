@@ -8,11 +8,11 @@
     <title> Tic Tac Toe </title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="shortcut icon" href="public/img/favicon.ico" />
 </head>
-<body>
-    <h1 id="title"> Tic Tac Toe </h1>
+<body onload="initialize();">
+    <h1 id="title">Tic Tac Toe</h1>
     <div class="game-board">
         <div class="game-cell" data-row="0" data-col="0"></div>
         <div class="game-cell" data-row="0" data-col="1"></div>
@@ -27,12 +27,8 @@
     <div id="game-over"></div>
 
     <!-- Scripts -->
-    <script src="js/Cell.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/minimax.js"></script>
-
-    <script> 
-        initialize();
-    </script>
+    <script src="public/js/Cell.js"></script>
+    <script src="public/js/script.js"></script>
+    <script src="public/js/minimax.js"></script>
 </body>
 </html>
